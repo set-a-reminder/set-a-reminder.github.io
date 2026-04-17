@@ -270,7 +270,7 @@
             if (url.searchParams.has('go-to-extension')){
                  url.searchParams.delete('go-to-extension');
                  window.history.replaceState({}, document.title, url.toString());
-                location.href = document.querySelector('.btn-chrome')?.click()
+                 document.querySelector('.btn-chrome')?.click()
             }
         })
     </script>
