@@ -268,9 +268,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             const url = new URL(location.href);
             if (url.searchParams.has('go-to-extension')){
-                 url.searchParams.delete('go-to-extension');
-                 window.history.replaceState({}, document.title, url.toString());
-                 document.querySelector('.btn-chrome')?.click()
+                 window.history.replaceState({}, document.title, window.location.pathname);
+                 setTimeout(() =>  document.querySelector('.btn-chrome')?.click(), 20);
             }
         })
     </script>
