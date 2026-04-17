@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        body{
+            text-align: center;
+        }
+        main{
+            text-align: left;
+            /*white-space: pre-line;*/
+        }
+        .images{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+            gap: 15px;
+        }
+        .images img{
+            flex: 0 1 47%;
+            min-width: 600px;
+        }
+        nav{
+            font-size: 16px;
+        }
+
+         * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header */
+    .header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.92);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .logo span {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .btn-chrome {
+      background: #1a73e8;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-chrome:hover {
+      background: #0d5cbd;
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(26,115,232,0.3);
+    }
+    .btn-large {
+      padding: 16px 40px;
+      font-size: 1.2rem;
+    }
+    .hero {
+      padding: 70px 0 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #1e293b, #3b82f6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: #4b5563;
+      max-width: 700px;
+      margin: 0 auto 32px;
+    }
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin: 50px 0 40px;
+    }
+    .step-card {
+      background: white;
+      border-radius: 32px;
+      padding: 28px 20px;
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+      border: 1px solid #eef2ff;
+    }
+    .step-icon {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+    .step-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 60px 0;
+      background: white;
+      border-radius: 48px;
+      padding: 40px 32px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+    }
+    .mode {
+      flex: 1;
+      background: #f8fafc;
+      border-radius: 32px;
+      padding: 28px;
+      transition: all 0.2s;
+    }
+    .mode h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin: 60px 0;
+    }
+    .feature {
+      background: white;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #eef2ff;
+    }
+    .feature h3 {
+      font-size: 1.5rem;
+      margin: 16px 0 8px;
+    }
+    .testimonial {
+      background: linear-gradient(145deg, #ffffff, #f5f7fe);
+      border-radius: 40px;
+      padding: 40px 32px;
+      margin: 50px 0;
+      text-align: center;
+    }
+    .faq {
+      background: white;
+      border-radius: 48px;
+      padding: 48px 40px;
+      margin: 60px 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 24px 0;
+    }
+    .faq-question {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 48px 0 32px;
+      margin-top: 60px;
+      border-radius: 32px 32px 0 0;
+    }
+    .footer a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+    .cta-section {
+      background: linear-gradient(115deg, #2563eb, #7c3aed);
+      border-radius: 48px;
+      padding: 60px 32px;
+      text-align: center;
+      color: white;
+      margin: 40px 0 20px;
+    }
+    .cta-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2.2rem; }
+      .container { padding: 0 20px; }
+      .step-card { min-width: 140px; }
+    }
+    .badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #1e40af;
+      border-radius: 40px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    </style>
+
+    <title>Set a Reminder – Voice & Text Reminders for Chrome</title>
+  <meta name="description" content="Add reminders by voice or text directly in your browser. Works offline, syncs with Google Calendar, and respects your privacy. The fastest reminder extension for Chrome.">
+  <meta name="keywords" content="voice reminder, text reminder, chrome extension, google calendar sync, offline reminders, task manager, productivity tool">
+  <meta name="author" content="Set a Reminder">
+  <meta property="og:title" content="Set a Reminder – Voice & Text Reminders for Chrome">
+  <meta property="og:description" content="The fastest way to capture tasks by voice or text. Offline-ready, privacy-first, and syncs with Google Calendar.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://scorpin46.github.io/set-a-reminder.github.io/banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="favicon.svg">
+</head>
+<body>
+    <h1>Set a Reminder</h1>
+    <main>
+  <div class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="badge">⚡ 2 seconds · voice first · offline</div>
+      <h1>Forget tabs. Forget apps. Just speak.</h1>
+      <p>Set reminders by voice or text without leaving the page you're on. Works offline, syncs with Google Calendar, and takes 2 seconds.</p>
+      <a href="https://chromewebstore.google.com/detail/set-a-reminder/okbopdkididkejgihepekdmohfomnnhc" class="btn-chrome btn-large">
+        ⚡ Add to Chrome – Free
+      </a>
+      <div class="steps">
+        <div class="step-card"><div class="step-icon">1️⃣</div><h3>Click icon</h3><p>In your Chrome toolbar</p></div>
+        <div class="step-card"><div class="step-icon">🎙️⌨️</div><h3>Speak or type</h3><p>Natural phrases, no menus</p></div>
+        <div class="step-card"><div class="step-icon">🔔</div><h3>Done.</h3><p>Get notified at the right time</p></div>
+      </div>
+    </section>
+
+    <!-- Two modes -->
+    <section class="two-columns">
+      <div class="mode">
+        <div style="font-size: 2.8rem;">🎙️</div>
+        <h3>Voice mode</h3>
+        <p>Click and say: <em>“meeting in 1 hour”</em> — extension converts speech to text instantly. Works with accents, background noise, or on the go. Just talk naturally.</p>
+        <ul style="margin-top: 16px; list-style: none; padding-left: 0;">
+          <li>✅ “remind me to call a courier in 2 hours”</li>
+          <li>✅ “set a reminder for tomorrow at 11 am to email boss”</li>
+          <li>✅ “in 30 minutes take a break”</li>
+        </ul>
+      </div>
+      <div class="mode">
+        <div style="font-size: 2.8rem;">⌨️</div>
+        <h3>Text mode</h3>
+        <p>Perfect for quiet spaces, calls, or when you prefer to type. Add tasks, notes, and detailed reminders without saying a word. Keyboard shortcuts for power users.</p>
+        <ul style="margin-top: 16px; list-style: none; padding-left: 0;">
+          <li>✅ Type “daily standup at 10 AM”</li>
+          <li>✅ Copy-paste meeting notes</li>
+          <li>✅ Use hotkeys to open instantly</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 core features grid -->
+    <div class="feature-grid">
+      <div class="feature"><div style="font-size: 2.2rem;">📴</div><h3>Works offline</h3><p>On a flight, subway, or remote cabin? Create, edit, and receive notifications without any internet. Syncs automatically when back online.</p></div>
+      <div class="feature"><div style="font-size: 2.2rem;">📅</div><h3>Google Calendar sync</h3><p>Connect once and all reminders appear as Google reminders on your iPhone or Android. Full control — sync only what you want.</p></div>
+      <div class="feature"><div style="font-size: 2.2rem;">🔒</div><h3>Privacy first</h3><p>Zero data selling. Your tasks, habits, and notes stay on your device unless you choose to sync. No tracking, no analytics.</p></div>
+      <div class="feature"><div style="font-size: 2.2rem;">⌨️</div><h3>Keyboard shortcuts</h3><p>Power users love speed. Open the extension, add a reminder, and go back to work — without touching the mouse.</p></div>
+    </div>
+
+    <!-- Testimonial (example placeholder) -->
+    <div class="testimonial">
+      <div style="font-size: 3rem; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+      <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 16px;"><em>“Finally a reminder that takes seconds. I just say 'remind me to buy groceries at 6pm' and it's done. Offline mode saved me on a 10-hour flight.”</em></p>
+      <p><strong>— Alex M.</strong> · Product Manager</p>
+      <p style="font-size: 0.85rem; color: #6c757d; margin-top: 12px;">*example based on early tester feedback</p>
+    </div>
+
+    <!-- FAQ section unique content -->
+    <div class="faq">
+      <h2 style="font-size: 2rem; margin-bottom: 32px;">Frequently asked questions</h2>
+      <div class="faq-item"><div class="faq-question">🌐 Does it work in languages other than English?</div><p>Yes. The extension supports 52 languages including Russian, Spanish, German, French, Japanese, and more. Voice recognition follows your browser's language settings.</p></div>
+      <div class="faq-item"><div class="faq-question">📱 Is there a mobile app?</div><p>No separate app needed. Sync with Google Calendar and your reminders appear as Google reminders on your iPhone or Android phone — instantly, without extra installation.</p></div>
+      <div class="faq-item"><div class="faq-question">🔄 Can I set recurring reminders?</div><p>Absolutely. Just say or type “remind me every day at 9 AM to stretch” or “every Monday at 10 AM for team stand-up”. Recurring habits and meetings are fully supported.</p></div>
+      <div class="faq-item"><div class="faq-question">🗑️ What happens if I uninstall the extension?</div><p>All local data is erased automatically. If you used Google Calendar sync, those reminders stay in your calendar (you can delete them there).</p></div>
+      <div class="faq-item"><div class="faq-question">⚡ Does it slow down my browser?</div><p>No. Set a Reminder is lightweight (~900KB) and uses minimal resources. Notifications and background sync are optimized for speed.</p></div>
+      <div class="faq-item"><div class="faq-question">🔐 Do you store my voice recordings?</div><p>Never. Voice is processed locally or via Chrome’s speech API. No audio leaves your device. We don’t record or store anything you say.</p></div>
+    </div>
+
+    <!-- CTA Section before footer -->
+    <div class="cta-section">
+      <h2>Ready to stop losing track of important things?</h2>
+      <p style="margin-bottom: 28px; opacity: 0.9;">Join thousands of users who capture tasks in seconds — just by speaking.</p>
+      <a href="https://chromewebstore.google.com/detail/set-a-reminder/okbopdkididkejgihepekdmohfomnnhc" class="btn-chrome" style="background: white; color: #1a73e8; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">➕ Add to Chrome — It's Free</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+      <div><strong style="color: white;">Set a Reminder</strong><br>Voice-first productivity for Chrome</div>
+      <div><a href="privacy.html">Privacy</a></div>
+      <div><span>© 2026 Set a Reminder</span></div>
+    </div>
+    <hr style="margin: 32px 0 16px; border-color: #334155;">
+    <p style="font-size: 0.8rem; text-align: center;">Privacy first — we don't collect, sell, or analyze your data. Your reminders stay yours.</p>
+  </div>
+</footer>
+    <a href="privacy.html">Privacy</a>
+</body>
+</html>
